@@ -11,7 +11,6 @@ class Route
         $url = $_SERVER['REQUEST_URI'];
         $routs = explode('/',$url);
 
-
             if (!empty($routs[2])) //controller
             {
                 $controllerName = $routs[2];
@@ -21,11 +20,10 @@ class Route
             }
 
 
-        $controllerClassName = 'application\controller\Controller_' . $controllerName;
+        $controllerClassName = 'application\controller\controller_' . $controllerName;
         $actionName = 'action_' . $actionName;
-
+            
         $controllerObject = new $controllerClassName;
-
         if(method_exists($controllerObject, $actionName)){
             $controllerObject->$actionName();
         }

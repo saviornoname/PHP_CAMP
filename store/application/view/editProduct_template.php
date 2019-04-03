@@ -1,4 +1,4 @@
-<form action="editProduct" method="post" enctype="multipart/form-data">
+<form action="/store/product/editProduct" method="post" enctype="multipart/form-data">
     <label for="productID">ID</label>
     <input type="text" name="productID" id="productID" value="<?= $data['dataProduct']['productID']?>">
     <br>
