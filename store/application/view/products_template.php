@@ -1,6 +1,6 @@
 <span>Products</span>
 
-<table>
+<table class="table table-striped table-bordered table-hover">
     <thead>
         <tr>
             <th>№</th>
@@ -23,7 +23,7 @@
             <td><?= $row['sku'] ?></td>
             <td><?= $row['description'] ?></td>
             <td><?= $row['CategoryName'] ?></td>
-            <td><img width="122" src="<?= ($row['image']) ?? '' ?>"></td>
+            <td><img width="122" src="/<?= ($row['image']) ?? '' ?>"></td>
             <td>
                 <a href="product/editProduct/?<?php echo http_build_query($row) . '"'?>>Edit</a>/
                 <a href="product/deleteProduct/?<?php echo http_build_query($row) . '"'?>>Delete</a>
