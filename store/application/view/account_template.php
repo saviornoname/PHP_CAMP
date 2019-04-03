@@ -25,6 +25,7 @@
 <?php if($data['Role'] == 1):?>
     <a href="accountAdmin">Admin</a><br><br>
 <?php endif; ?>
+
 <br><a href="addAddress">Add Address</a><br>
 <br><a href="edit">Edit</a><br>
 <br><a href="logout">Logout</a>
