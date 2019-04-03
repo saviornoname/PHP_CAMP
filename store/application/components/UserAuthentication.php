@@ -29,10 +29,11 @@ class UserAuthentication
     }
 
     /**
-     * @param $loginData
+     * @param array $loginData
+     *
      * @return bool
      */
-    public function userLogIn($loginData)
+    public function userLogIn(array $loginData)
     {
         $userInfo = $this->modelUser->userAuthorization($loginData['login'],$loginData['password']);
         if ($userInfo) {
@@ -40,6 +41,7 @@ class UserAuthentication
             $this->sessionManipulation->setSessionData('loggedUser', $userInfo);
             return true;
         }
+
         return false;
     }
 
